@@ -1,13 +1,10 @@
 const express = require("express");
 require("dotenv").config();
-const serverless = require("serverless-http");
 
 const app = express();
 const path = require("path");
 const { Chat } = require("./modals/Chat");
 // setting up
-const router = express.Router();
-app.use("/", router);
 app.use(express.json());
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
@@ -60,4 +57,3 @@ app.post("/delete/:id", (req, res) => {
     res.redirect("/");
   });
 });
-const handler = serverless(app);
