@@ -1,6 +1,6 @@
 {
   "engine":{
-    "node": "v20.3.0"
+    "node": "20.3.0"
   },
   "name": "mongodb",
   "version": "1.0.0",
