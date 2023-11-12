@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>This is chat app</title>
+        <link rel="stylesheet" href="/style/app.css">
+        <meta name="color-scheme" content="dark">
+    </head>
+
+    <body>
+        <header>
+            <h1>Welcome to Sasta Whatsapp</h1>
+            <p>Created by <a href="https://ayushshah.in">Ayush Shah</a></p>
+        </header>
+        <main>
+            <form action="/edit/<%=chat._id%>" method="post" class="edit-message">
+                <div>
+                    <h3>You are editing message of <%= chat.from %>
+                    </h3>
+                </div>
+                <div>
+                    <textarea name="message" placeholder="updated message here"><%= chat.message %></textarea>
+                </div>
+                <button>Update</button>
+            </form>
+        </main>
+    </body>
+
+</html>

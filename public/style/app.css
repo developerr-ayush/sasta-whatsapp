@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+  background-color: rgb(0, 68, 68);
+  padding: 1rem;
+  text-align: center;
+  height: 100px;
+}
+.chat-container {
+  height: calc(100vh - 150px);
+  padding: 2rem;
+  overflow: auto;
+}
+.chat-item {
+  margin: 1rem 0;
+  width: max-content;
+  max-width: 100%;
+  background-color: rgb(0, 68, 68);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.chat-message{
+    background-color: rgb(2, 94, 64)
+}
+.chat-message form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 50px;
+  padding-inline: 2rem;
+}
+
+.chat-message form > div:first-child {
+  width: 10rem;
+}
+.chat-message form > div:nth-child(2) {
+  flex: 1;
+}
+.chat-message input {
+  width: 100%;
+  padding: 0.2rem;
+  height: 35px;
+}
+.chat-message button {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit-message h3 {
+  margin-block: 2rem;
+  text-align: center;
+}
+.edit-message textarea {
+  width: 100%;
+  height: 200px;
+  max-width: 400px;
+  margin: auto;
+  display: block;
+  padding: 0.5rem;
+  resize: none;
+}
+.edit-message button{
+    margin-top: 2rem;
+}
+button{
+    width: 10rem;
+    display: block;
+    margin: auto;
+    padding: 0.5rem;
+}
+.chat-options{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>This is chat app</title>
+        <link rel="stylesheet" href="/style/app.css">
+        <meta name="color-scheme" content="dark">
+    </head>
+
+    <body>
+        <header>
+            <h1>Welcome to Sasta Whatsapp</h1>
+            <p>Created by <a href="https://ayushshah.in">Ayush Shah</a></p>
+        </header>
+        <main>
+            <div class="chat-container">
+                <div class="chat-list">
+                    <% for (let index=0; index < chats.length; index++) { %>
+                        <div class="chat-item">
+                            <p class="from">From: <%= chats[index].from %>
+                            </p>
+                            <p class="message">
+                                <%= chats[index].message %>
+                            </p>
+                            <p class="sent">
+                                <% if (chats[index].updatedAt) { %>
+                                    Updated at:
+                                    <%= chats[index].updatedAt.toString().split(" ").splice(1,4).join(" ") %>
+                                <% } else{ %>
+                                    Created at:
+                                    <%= chats[index].createdAt.toString().split(" ").splice(1,4).join(" ") %>
+                                <% }%>
+                            </p>
+                            <div class=" chat-options">
+
+                                        <form action="/edit/<%=chats[index]._id%>" method="get">
+                                            <button>Edit</button>
+                                        </form>
+                                        <form action="/delete/<%=chats[index]._id%>" method="post">
+                                            <button>Delete</button>
+                                        </form>
+                        </div>
+                </div>
+                <% } %>
+
+            </div>
+            </div>
+            <div class="chat-message">
+                <form action="/send" method="post" autocomplete="off">
+                    <div class="chat-from">
+                        <input type="text" name="from" placeholder="From" required onload="this.value = ''"
+                            maxlength="12">
+                    </div>
+                    <div class="chat-message">
+                        <input type="text" name="message" placeholder="Type your Message" required
+                            onload="this.value = ''">
+                    </div>
+                    <button>Send</button>
+                </form>
+            </div>
+        </main>
+    </body>
+
+</html>
