@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
   });
 });
 app.post("/send", (req, res) => {
-  let newChat = new Chat(req.body);
+  let newChat = new Chat({ ...req.body, createdAt: Date.now() });
   newChat
     .save()
     .then(() => {
