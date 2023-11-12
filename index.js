@@ -4,6 +4,7 @@ require("dotenv").config();
 const app = express();
 const path = require("path");
 const { Chat } = require("./modals/Chat");
+api.use('/.netlify/functions/', router);
 // setting up
 app.use(express.json());
 app.set("views", path.join(__dirname, "views"));
