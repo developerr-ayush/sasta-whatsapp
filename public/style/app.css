@@ -23,8 +23,8 @@ header {
   border-radius: 1rem;
   padding: 1rem;
 }
-.chat-message{
-    background-color: rgb(2, 94, 64)
+.chat-message {
+  background-color: rgb(2, 94, 64);
 }
 .chat-message form {
   display: flex;
@@ -35,7 +35,7 @@ header {
 }
 
 .chat-message form > div:first-child {
-  width: 10rem;
+  flex: 1;
 }
 .chat-message form > div:nth-child(2) {
   flex: 1;
@@ -46,12 +46,13 @@ header {
   height: 35px;
 }
 .chat-message button {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: max-content;
 }
 .edit-message h3 {
   margin-block: 2rem;
@@ -66,17 +67,29 @@ header {
   padding: 0.5rem;
   resize: none;
 }
-.edit-message button{
-    margin-top: 2rem;
+.edit-message button {
+  margin-top: 2rem;
 }
-button{
-    width: 10rem;
-    display: block;
-    margin: auto;
-    padding: 0.5rem;
+button {
+  width: 10rem;
+  display: block;
+  margin: auto;
+  padding: 0.5rem;
 }
-.chat-options{
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+.chat-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+h1 {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2rem ;
+  }
+  .chat-options {
+    flex-direction: row;
+  }
 }
