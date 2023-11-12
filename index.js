@@ -24,7 +24,7 @@ app.post("/send", (req, res) => {
     .save()
     .then(() => {
       {
-        console.log("Chat saved");
+        res.redirect("/");
       }
     })
     .catch((err) => {
@@ -32,7 +32,6 @@ app.post("/send", (req, res) => {
         console.log(err);
       }
     });
-  res.redirect("/");
 });
 
 app.get("/edit/:id", (req, res) => {
