@@ -56,3 +56,4 @@ app.post("/delete/:id", (req, res) => {
     res.redirect("/");
   });
 });
+module.exports = app;
